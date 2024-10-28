@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function calcularDescuento() {
+            var montoCompra = parseFloat(prompt("Ingrese el monto total de compra:"));
+            var descuento = 0;
+
+            if (montoCompra >= 1000) {
+                descuento = 0.10;
+            } else if (montoCompra >= 500) {
+                descuento = 0.05;
+            }
+
+            var montoConDescuento = montoCompra - (montoCompra * descuento);
+            alert("El monto total con descuento aplicado es: " + montoConDescuento.toFixed(2));
+        }
+
+        calcularDescuento();
+    </script>
+</body>
+</html>
