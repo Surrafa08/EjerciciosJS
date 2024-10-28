@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        let saldo = 1000;
+        let montoRetiro = parseFloat(prompt("Ingrese el monto que desea retirar:"));
+
+        if (montoRetiro > saldo) {
+            console.log("Error: El monto que desea retirar excede el saldo disponible.");
+        } else {
+            saldo -= montoRetiro;
+            console.log(`Monto retirado: $${montoRetiro}`);
+            console.log(`Saldo restante: $${saldo}`);
+        }
+    </script>
+</body>
+</html>
