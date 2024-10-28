@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+</head>
+<body>
+    <script>
+        var carrito = [];
+        var totalCompra = 0;
+
+        while (true) {
+            var nombreProducto = prompt("Ingrese el nombre del producto (o escriba 'salir' para terminar):");
+            if (nombreProducto.toLowerCase() === 'salir') {
+                break;
+            }
+
+            var precio = parseFloat(prompt("Ingrese el precio del producto:"));
+            if (!isNaN(precio) && precio > 0) {
+                carrito.push({ nombre: nombreProducto, precio: precio });
+                totalCompra += precio;
+            } else {
+                console.log("Precio no válido. Intente de nuevo.");
+            }
+        }
+
+        console.log("Total de la compra: $" + totalCompra);
+        console.log("Productos en el carrito:");
+        carrito.forEach(function(producto) {
+            console.log("Producto: " + producto.nombre + ", Precio: $" + producto.precio);
+        });
+    </script>
+</body>
+</html>
