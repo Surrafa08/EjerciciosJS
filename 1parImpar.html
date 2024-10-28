@@ -1,10 +1,22 @@
-function verificarParImpar(numero) {
-    var num = parseInt(numero);
-    var resultado;
-    if (num % 2 === 0) {
-        resultado = "El número " + num + " es par.";
-    } else {
-        resultado = "El número " + num + " es impar.";
-    }
-    return resultado;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documento</title>
+</head>
+<body>
+    <script>
+        function verificarParImpar() {
+            var numero = parseInt(prompt("Ingrese un número:"));
+            if (numero % 2 === 0) {
+                alert("El número " + numero + " es par.");
+            } else {
+                alert("El número " + numero + " es impar.");
+            }
+        }
+
+        verificarParImpar();
+    </script>
+</body>
+</html>
