@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var otroViaje = true;
+
+        while (otroViaje) {
+            var distancia = parseInt(prompt("Ingresa la distancia total del viaje en km:"));
+            var velocidad = parseInt(prompt("Ingresa la velocidad promedio del coche en km/h:"));
+            var tiempoEstimado = distancia / velocidad;
+
+            alert("El tiempo estimado de viaje es: " + tiempoEstimado + " horas.");
+
+            otroViaje = confirm("¿Deseas hacer otro viaje?");
+        }
+    </script>
+</body>
+</html>
