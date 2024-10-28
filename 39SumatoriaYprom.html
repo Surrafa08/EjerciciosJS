@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumatoria y Promedio</title>
+</head>
+<body>
+    <script>
+        var inicio = parseInt(prompt("Ingrese el inicio del rango:"));
+        var fin = parseInt(prompt("Ingrese el fin del rango:"));
+        var suma = 0;
+        var count = 0;
+
+        while (inicio <= fin) {
+            suma += inicio;
+            count++;
+            inicio++;
+        }
+
+        var promedio = suma / count;
+        console.log("Sumatoria: " + suma);
+        console.log("Promedio: " + promedio);
+    </script>
+</body>
+</html>
