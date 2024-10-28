@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var temperatura;
+
+        do {
+            temperatura = parseFloat(prompt("Ingresa la temperatura actual en °C:"));
+            if (temperatura < 18 || temperatura > 25) {
+                alert("Temperatura fuera del rango aceptable. Por favor, intenta de nuevo.");
+            }
+        } while (temperatura < 18 || temperatura > 25);
+
+        alert("Temperatura aceptable: " + temperatura + "°C");
+    </script>
+</body>
+</html>
