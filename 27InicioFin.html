@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var inicio = parseInt(prompt("Ingrese el inicio del rango:"));
+        var fin = parseInt(prompt("Ingrese el fin del rango:"));
+        var sumatoria = 0;
+
+        for (var i = inicio; i <= fin; i++) {
+            sumatoria += i;
+        }
+
+        var promedio = sumatoria / (fin - inicio + 1);
+        console.log("Sumatoria: " + sumatoria);
+        console.log("Promedio: " + promedio);
+    </script>
+</body>
+</html>
