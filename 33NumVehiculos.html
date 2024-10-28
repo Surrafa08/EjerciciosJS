@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vehículos</title>
+</head>
+<body>
+    <script>
+        var numVehiculos = parseInt(prompt("Ingrese el número de vehículos que ingresarán al parqueadero:"));
+        var vehiculos = [];
+
+        for (var i = 0; i < numVehiculos; i++) {
+            var placa = prompt("Ingrese la placa del vehículo " + (i + 1) + ":");
+            var horaIngreso = new Date().toLocaleTimeString();
+            vehiculos.push({ placa: placa, hora: horaIngreso });
+        }
+
+        console.log("Vehículos registrados:");
+        vehiculos.forEach(function(vehiculo) {
+            console.log("Placa: " + vehiculo.placa + ", Hora de ingreso: " + vehiculo.hora);
+        });
+    </script>
+</body>
+</html>
