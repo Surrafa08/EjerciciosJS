@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function calcularIMC() {
+            var peso = parseFloat(prompt("Ingrese su peso en kilogramos:"));
+            var altura = parseFloat(prompt("Ingrese su altura en metros:"));
+
+            var imc = peso / (altura * altura);
+            var categoria;
+
+            if (imc < 18.5) {
+                categoria = "Bajo peso";
+            } else if (imc < 24.9) {
+                categoria = "Peso normal";
+            } else if (imc < 29.9) {
+                categoria = "Sobrepeso";
+            } else {
+                categoria = "Obesidad";
+            }
+
+            alert("Su IMC es: " + imc.toFixed(2) + "\nCategoría: " + categoria);
+        }
+
+        calcularIMC();
+    </script>
+</body>
+</html>
