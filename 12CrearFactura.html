@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function crearFactura() {
+            var nombreCliente = prompt("Ingrese el nombre del cliente:");
+            var precioProducto = parseFloat(prompt("Ingrese el precio del producto:"));
+            var cantidadComprada = parseInt(prompt("Ingrese la cantidad comprada:"));
+            var precioTotal = precioProducto * cantidadComprada;
+            var descuento = 0;
+
+            if (cantidadComprada >= 10) {
+                descuento = 0.10;
+            } else if (cantidadComprada >= 5) {
+                descuento = 0.05;
+            }
+
+            var precioConDescuento = precioTotal - (precioTotal * descuento);
+            var fecha = new Date().toLocaleDateString();
+
+            var factura = "Factura\n" +
+                          "Nombre del Cliente: " + nombreCliente + "\n" +
+                          "Precio del Producto: " + precioProducto.toFixed(2) + "\n" +
+                          "Cantidad Comprada: " + cantidadComprada + "\n" +
+                          "Total sin Descuento: " + precioTotal.toFixed(2) + "\n" +
+                          "Descuento Aplicado: " + (descuento * 100) + "%\n" +
+                          "Total a Pagar: " + precioConDescuento.toFixed(2) + "\n" +
+                          "Fecha: " + fecha;
+
+            alert(factura);
+        }
+
+        crearFactura();
+    </script>
+</body>
+</html>
