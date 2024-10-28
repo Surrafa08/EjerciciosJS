@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function clasificacionCampeonato() {
+            var equipos = {
+                "Equipo A": 0,
+                "Equipo B": 0
+            };
+
+            var resultado = prompt("Ingrese el resultado del partido (ganado, perdido o empatado):").toLowerCase();
+
+            if (resultado === "ganado") {
+                equipos["Equipo A"] += 3;
+                equipos["Equipo B"] += 0;
+            } else if (resultado === "perdido") {
+                equipos["Equipo A"] += 0;
+                equipos["Equipo B"] += 3;
+            } else if (resultado === "empatado") {
+                equipos["Equipo A"] += 1;
+                equipos["Equipo B"] += 1;
+            } else {
+                alert("Resultado inválido. Intente nuevamente.");
+                return;
+            }
+
+            var clasificacion = "Clasificación actual:\n";
+            for (var equipo in equipos) {
+                clasificacion += equipo + ": " + equipos[equipo] + " puntos\n";
+            }
+
+            alert(clasificacion);
+        }
+
+        clasificacionCampeonato();
+    </script>
+</body>
+</html>
