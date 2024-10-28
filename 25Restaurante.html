@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function menuRestaurante() {
+            var platos = {
+                "1": { nombre: "Pizza", precio: 10 },
+                "2": { nombre: "Hamburguesa", precio: 8 },
+                "3": { nombre: "Ensalada", precio: 7 }
+            };
+
+            var bebidas = {
+                "1": { nombre: "Refresco", precio: 2 },
+                "2": { nombre: "Agua", precio: 1.5 },
+                "3": { nombre: "Cerveza", precio: 3 }
+            };
+
+            var seleccionPlatos = [];
+            var seleccionBebidas = [];
+            var continuar = true;
+
+            while (continuar) {
+                var eleccionPlato = prompt("Seleccione un plato:\n1. Pizza ($10)\n2. Hamburguesa ($8)\n3. Ensalada ($7)\nIngrese el número del plato o 'salir' para terminar.");
+                if (eleccionPlato === "salir") break;
+                if (platos[eleccionPlato]) {
+                    seleccionPlatos.push(platos[eleccionPlato]);
+                } else {
+                    alert("Selección inválida. Intente de nuevo.");
+                }
+            }
+
+            while (continuar) {
+                var eleccionBebida = prompt("Seleccione una bebida:\n1. Refresco ($2)\n2. Agua ($1.5)\n3. Cerveza ($3)\nIngrese el número de la bebida o 'salir' para terminar.");
+                if (eleccionBebida === "salir") break;
+                if (bebidas[eleccionBebida]) {
+                    seleccionBebidas.push(bebidas[eleccionBebida]);
+                } else {
+                    alert("Selección inválida. Intente de nuevo.");
+                }
+            }
+
+            var total = 0;
+            seleccionPlatos.forEach(function(plato) {
+                total += plato.precio;
+            });
+
+            seleccionBebidas.forEach(function(bebida) {
+                total += bebida.precio;
+            });
+
+            var metodoPago = prompt("Seleccione el método de pago:\n1. Efectivo\n2. Tarjeta de crédito\n3. Cheque");
+            var descuento = 0;
+
+            if (metodoPago === "1") {
+                descuento = total * 0.1; // 10% de descuento
+            } else if (metodoPago === "2") {
+                descuento = total * 0.05; // 5% de descuento
+            } else if (metodoPago === "3") {
+                descuento = total * 0.0; // Sin descuento
+            } else {
+                alert("Método de pago inválido.");
+            }
+
+            var totalConDescuento = total - descuento;
+            alert("Total a pagar: $" + total.toFixed(2) + "\nDescuento: $" + descuento.toFixed(2) + "\nTotal después del descuento: $" + totalConDescuento.toFixed(2));
+        }
+
+        menuRestaurante();
+    </script>
+</body>
+</html>
