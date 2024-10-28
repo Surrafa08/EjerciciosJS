@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var listaTareas = "";
+        var continuar = true;
+
+        while (continuar) {
+            var descripcion = prompt("Ingresa la descripción de la tarea:");
+            var fechaVencimiento = prompt("Ingresa la fecha de vencimiento (DD/MM/AAAA):");
+
+            listaTareas += "Tarea: " + descripcion + ", Fecha de Vencimiento: " + fechaVencimiento + "\n";
+            
+            continuar = confirm("¿Deseas agregar otra tarea?");
+        }
+
+        alert("Lista de Tareas:\n" + listaTareas);
+    </script>
+</body>
+</html>
