@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function calificacionGogo() {
+            var calificacion = parseInt(prompt("Ingrese una calificación numérica del 0 al 100:"));
+
+            if (calificacion < 0 || calificacion > 100) {
+                alert("Calificación no válida.");
+                return;
+            }
+
+            var mensaje;
+
+            switch (true) {
+                case (calificacion >= 90):
+                    mensaje = "A";
+                    break;
+                case (calificacion >= 80):
+                    mensaje = "B";
+                    break;
+                case (calificacion >= 70):
+                    mensaje = "C";
+                    break;
+                case (calificacion >= 60):
+                    mensaje = "D";
+                    break;
+                default:
+                    mensaje = "F";
+            }
+
+            alert("La calificación es: " + mensaje);
+        }
+
+        calificacionGogo();
+    </script>
+</body>
+</html>
