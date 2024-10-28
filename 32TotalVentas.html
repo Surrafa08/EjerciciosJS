@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var totalVentas = 0;
+        var productosVendidos = [];
+
+        while (true) {
+            var nombreProducto = prompt("Ingrese el nombre del producto (o escriba 'salir' para terminar):");
+
+            if (nombreProducto.toLowerCase() === 'salir') {
+                break;
+            }
+
+            var precio = parseFloat(prompt("Ingrese el precio del producto:"));
+            var cantidad = parseInt(prompt("Ingrese la cantidad vendida:"));
+
+            if (!isNaN(precio) && !isNaN(cantidad) && cantidad > 0) {
+                var totalProducto = precio * cantidad;
+                totalVentas += totalProducto;
+                productosVendidos.push(nombreProducto + " (Cantidad: " + cantidad + ", Precio: $" + precio + ")");
+            } else {
+                console.log("Entrada no válida. Asegúrese de ingresar un precio y una cantidad válidos.");
+            }
+        }
+
+        console.log("Total de ventas: $" + totalVentas);
+        console.log("Productos vendidos:");
+        productosVendidos.forEach(function(producto) {
+            console.log(producto);
+        });
+    </script>
+</body>
+</html>
