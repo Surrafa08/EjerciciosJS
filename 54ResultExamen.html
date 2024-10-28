@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var suma = 0;
+        var contador = 0;
+        var continuar = true;
+
+        while (continuar) {
+            var resultado = parseFloat(prompt("Ingresa el resultado del examen:"));
+            suma += resultado;
+            contador++;
+
+            continuar = confirm("¿Deseas ingresar otro resultado?");
+        }
+
+        var promedio = suma / contador;
+        var estado = promedio >= 60 ? "Aprobado" : "Reprobado";
+
+        alert("Promedio de resultados: " + promedio.toFixed(2) + "\nEstado: " + estado);
+    </script>
+</body>
+</html>
