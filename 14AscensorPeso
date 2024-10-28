@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function simularAscensor() {
+            var limitePeso = 300;
+            var pesoUsuario = parseInt(prompt("Ingrese su peso en kilogramos:"));
+            var totalPisos = 10;
+            var pisoDeseado = parseInt(prompt("Ingrese el piso al que desea ir (1 - " + totalPisos + "):"));
+
+            if (pesoUsuario <= limitePeso) {
+                if (pisoDeseado >= 1 && pisoDeseado <= totalPisos) {
+                    alert("El ascensor se está moviendo al piso " + pisoDeseado + ".");
+                    alert("Ha llegado al piso " + pisoDeseado + ".");
+                } else {
+                    alert("Error: El piso ingresado no es válido. Por favor, ingrese un número entre 1 y " + totalPisos + ".");
+                }
+            } else {
+                alert("Error: El ascensor está sobrecargado. Por favor, reduzca el peso.");
+            }
+        }
+
+        simularAscensor();
+    </script>
+</body>
+</html>
