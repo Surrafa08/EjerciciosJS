@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var suma = 0;
+        var numero;
+
+        do {
+            numero = parseInt(prompt("Ingresa un número positivo (o un número negativo para finalizar):"));
+            if (numero >= 0) {
+                suma += numero;
+            }
+        } while (numero >= 0);
+
+        alert("La suma de los números ingresados es: " + suma);
+    </script>
+</body>
+</html>
