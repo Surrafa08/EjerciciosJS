@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function verificarTemperatura() {
+            var temperaturaActual = parseInt(prompt("Ingrese la temperatura actual en °C:"));
+            var rangoMinimo = 18;
+            var rangoMaximo = 25;
+
+            if (temperaturaActual >= rangoMinimo && temperaturaActual <= rangoMaximo) {
+                alert("La temperatura es adecuada.");
+            } else {
+                alert("La temperatura está fuera del rango deseado.");
+            }
+        }
+
+        verificarTemperatura();
+    </script>
+</body>
+</html>
