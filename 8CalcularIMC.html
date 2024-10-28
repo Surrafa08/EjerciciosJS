@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documento</title>
+</head>
+<body>
+    <script>
+        function calcularIMC() {
+            var peso = parseFloat(prompt("Ingrese su peso en kilogramos:"));
+            var altura = parseFloat(prompt("Ingrese su altura en metros:"));
+
+            var imc = peso / (altura * altura);
+            var mensaje;
+
+            if (imc < 18.5) {
+                mensaje = "Bajo peso";
+            } else if (imc < 25) {
+                mensaje = "Peso normal";
+            } else if (imc < 30) {
+                mensaje = "Sobrepeso";
+            } else {
+                mensaje = "Gordo";
+            }
+
+            alert("Su IMC es: " + imc.toFixed(2) + ". " + mensaje);
+        }
+
+        calcularIMC();
+    </script>
+</body>
+</html>
