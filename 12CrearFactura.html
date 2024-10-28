@@ -8,29 +8,32 @@
 <body>
     <script>
         function crearFactura() {
-            var nombreCliente = prompt("Ingrese el nombre del cliente:");
-            var precioProducto = parseFloat(prompt("Ingrese el precio del producto:"));
-            var cantidadComprada = parseInt(prompt("Ingrese la cantidad comprada:"));
-            var precioTotal = precioProducto * cantidadComprada;
-            var descuento = 0;
+            var nombreCliente = "María López";
+            var producto = "Teléfono Inteligente";
+            var cantidadComprada = 3;
+            var precioUnitario = 300.00;
+            var esEstudiante = false;
+            var tipoCliente = "B";
+            
+            var subtotal = cantidadComprada * precioUnitario;
+            var impuesto;
 
-            if (cantidadComprada >= 10) {
-                descuento = 0.10;
-            } else if (cantidadComprada >= 5) {
-                descuento = 0.05;
+            if (esEstudiante) {
+                impuesto = subtotal * 0.05;
+            } else {
+                impuesto = subtotal * 0.13;
             }
 
-            var precioConDescuento = precioTotal - (precioTotal * descuento);
-            var fecha = new Date().toLocaleDateString();
+            var total = subtotal + impuesto;
 
             var factura = "Factura\n" +
                           "Nombre del Cliente: " + nombreCliente + "\n" +
-                          "Precio del Producto: " + precioProducto.toFixed(2) + "\n" +
+                          "Producto: " + producto + "\n" +
                           "Cantidad Comprada: " + cantidadComprada + "\n" +
-                          "Total sin Descuento: " + precioTotal.toFixed(2) + "\n" +
-                          "Descuento Aplicado: " + (descuento * 100) + "%\n" +
-                          "Total a Pagar: " + precioConDescuento.toFixed(2) + "\n" +
-                          "Fecha: " + fecha;
+                          "Precio Unitario: " + precioUnitario.toFixed(2) + "\n" +
+                          "Subtotal: " + subtotal.toFixed(2) + "\n" +
+                          "Impuesto: " + impuesto.toFixed(2) + "\n" +
+                          "Total a Pagar: " + total.toFixed(2) + "\n";
 
             alert(factura);
         }
