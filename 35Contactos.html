@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contactos</title>
+</head>
+<body>
+    <script>
+        var contactos = [];
+
+        while (true) {
+            var nombre = prompt("Ingrese el nombre del contacto (o escriba 'salir' para terminar):");
+            if (nombre.toLowerCase() === 'salir') {
+                break;
+            }
+
+            var telefono = prompt("Ingrese el número de teléfono de " + nombre + ":");
+            contactos.push({ nombre: nombre, telefono: telefono });
+        }
+
+        console.log("Contactos registrados:");
+        contactos.forEach(function(contacto) {
+            console.log("Nombre: " + contacto.nombre + ", Teléfono: " + contacto.telefono);
+        });
+    </script>
+</body>
+</html>
