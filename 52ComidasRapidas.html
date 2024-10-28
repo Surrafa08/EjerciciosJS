@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var total = 0;
+        var continuar = true;
+
+        while (continuar) {
+            var menu = prompt("Selecciona una opción:\n1. Hamburguesa - $5\n2. Papas fritas - $3\n3. Refresco - $2\n4. Finalizar pedido");
+            
+            switch (menu) {
+                case '1':
+                    total += 5;
+                    alert("Has añadido una Hamburguesa.");
+                    break;
+                case '2':
+                    total += 3;
+                    alert("Has añadido Papas fritas.");
+                    break;
+                case '3':
+                    total += 2;
+                    alert("Has añadido un Refresco.");
+                    break;
+                case '4':
+                    continuar = false;
+                    break;
+                default:
+                    alert("Opción no válida. Por favor, intenta de nuevo.");
+                    break;
+            }
+        }
+
+        alert("El costo total de tu pedido es: $" + total + "\n¡Gracias por tu compra!");
+    </script>
+</body>
+</html>
