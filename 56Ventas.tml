@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var totalVentas = 0;
+        var resumenVentas = "";
+        var continuar = true;
+
+        while (continuar) {
+            var producto = prompt("Ingresa el nombre del producto vendido:");
+            var precio = parseFloat(prompt("Ingresa el precio del producto:"));
+
+            totalVentas += precio;
+            resumenVentas += "Producto: " + producto + ", Precio: $" + precio.toFixed(2) + "\n";
+
+            continuar = confirm("¿Deseas registrar otra venta?");
+        }
+
+        alert("Monto total de ventas: $" + totalVentas.toFixed(2) + "\nResumen de productos vendidos:\n" + resumenVentas);
+    </script>
+</body>
+</html>
