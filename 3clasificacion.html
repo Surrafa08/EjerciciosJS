@@ -1,15 +1,35 @@
-function clasificarCalificacion(calificacion) {
-    var nota = parseInt(calificacion);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documento</title>
+</head>
+<body>
+    <script>
+        function clasificarCalificacion() {
+            var calificacion = parseInt(prompt("Ingrese la calificación (1-100):"));
+            var letra;
 
-    if (nota >= 90) {
-        console.log("A");
-    } else if (nota >= 80) {
-        console.log("B");
-    } else if (nota >= 70) {
-        console.log("C");
-    } else if (nota >= 60) {
-        console.log("D");
-    } else {
-        console.log("F");
-    }
-}
+            if (calificacion >= 90 && calificacion <= 100) {
+                letra = "A";
+            } else if (calificacion >= 80 && calificacion < 90) {
+                letra = "B";
+            } else if (calificacion >= 70 && calificacion < 80) {
+                letra = "C";
+            } else if (calificacion >= 60 && calificacion < 70) {
+                letra = "D";
+            } else if (calificacion >= 0 && calificacion < 60) {
+                letra = "F";
+            } else {
+                alert("Calificación fuera de rango.");
+                return;
+            }
+
+            alert("La calificación es: " + letra);
+        }
+
+        clasificarCalificacion();
+    </script>
+</body>
+</html>
