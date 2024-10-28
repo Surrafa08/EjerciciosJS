@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var listaLibros = "";
+        var continuar = true;
+
+        while (continuar) {
+            var titulo = prompt("Ingresa el título del libro:");
+            var autor = prompt("Ingresa el autor del libro:");
+            var paginas = parseInt(prompt("Ingresa el número de páginas del libro:"));
+            
+            listaLibros += "Título: " + titulo + ", Autor: " + autor + ", Páginas: " + paginas + "\n";
+            
+            continuar = confirm("¿Deseas registrar otro libro?");
+        }
+
+        alert("Libros registrados:\n" + listaLibros);
+    </script>
+</body>
+</html>
