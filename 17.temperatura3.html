@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function simularAscensor() {
+            var temperaturaActual = parseInt(prompt("Ingrese la temperatura actual en °C:"));
+            var rangoAceptableMin = 18;
+            var rangoAceptableMax = 25;
+
+            if (temperaturaActual >= rangoAceptableMin && temperaturaActual <= rangoAceptableMax) {
+                var pisoDeseado = parseInt(prompt("Ingrese el piso al que desea ir (1-10):"));
+
+                if (pisoDeseado >= 1 && pisoDeseado <= 10) {
+                    alert("El ascensor se mueve al piso " + pisoDeseado + ".");
+                } else {
+                    alert("Error: El piso ingresado no es válido.");
+                }
+            } else {
+                alert("La temperatura no es adecuada. El ascensor no se moverá.");
+            }
+        }
+
+        simularAscensor();
+    </script>
+</body>
+</html>
