@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documento</title>
+</head>
+<body>
+    <script>
+        function verificarPromedio() {
+            var numero1 = parseInt(prompt("Ingrese el primer número (1-10):"));
+            var numero2 = parseInt(prompt("Ingrese el segundo número (1-10):"));
+            var numero3 = parseInt(prompt("Ingrese el tercer número (1-10):"));
+
+            var promedio = (numero1 + numero2 + numero3) / 3;
+
+            var resultado = promedio > 5;
+            alert("El promedio es: " + promedio + ". ¿Es mayor a 5? " + resultado);
+        }
+
+        verificarPromedio();
+    </script>
+</body>
+</html>
