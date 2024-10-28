@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function verificarTemperatura() {
+            var temperaturaActual = parseInt(prompt("Ingrese la temperatura actual en °C:"));
+            var umbralDeAlerta = 30;
+
+            if (temperaturaActual > umbralDeAlerta) {
+                alert("¡Alerta! La temperatura está por encima del umbral de alerta.");
+            } else {
+                alert("La temperatura es normal.");
+            }
+        }
+
+        verificarTemperatura();
+    </script>
+</body>
+</html>
