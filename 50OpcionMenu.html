@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var opcion;
+
+        do {
+            opcion = prompt("Selecciona una opción:\n1. Opción 1\n2. Opción 2\n3. Opción 3\n4. Salir");
+
+            switch (opcion) {
+                case '1':
+                    alert("Has seleccionado la Opción 1.");
+                    break;
+                case '2':
+                    alert("Has seleccionado la Opción 2.");
+                    break;
+                case '3':
+                    alert("Has seleccionado la Opción 3.");
+                    break;
+                case '4':
+                    alert("Saliendo del programa.");
+                    break;
+                default:
+                    alert("Opción no válida. Por favor, intenta de nuevo.");
+                    break;
+            }
+        } while (opcion !== '4');
+    </script>
+</body>
+</html>
