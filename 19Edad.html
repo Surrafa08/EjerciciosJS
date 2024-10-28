@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function Edadgogo() {
+            var edad = parseInt(prompt("Ingrese su edad:"));
+
+            if (edad < 0) {
+                alert("Edad no válida.");
+                return;
+            }
+
+            var categoria;
+
+            if (edad <= 12) {
+                categoria = "niño";
+            } else if (edad <= 17) {
+                categoria = "adolescente";
+            } else if (edad <= 64) {
+                categoria = "adulto";
+            } else {
+                categoria = "adulto mayor";
+            }
+
+            alert("Usted es un " + categoria + ".");
+        }
+
+        Edadgogo();
+    </script>
+</body>
+</html>
