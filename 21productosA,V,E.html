@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        function calcularCompra() {
+            var tipoProducto = prompt("Ingrese el tipo de producto que desea comprar (A - Alimentos, V - Vestimenta, E - Electrónicos):").toUpperCase();
+            var cantidad = parseInt(prompt("Ingrese la cantidad de unidades:"));
+
+            if (isNaN(cantidad) || cantidad <= 0) {
+                alert("La cantidad de unidades debe ser un número positivo.");
+                return;
+            }
+
+            var precioBase;
+            var descuento;
+
+            switch (tipoProducto) {
+                case 'A':
+                    precioBase = 10;
+                    descuento = 0.10;
+                    break;
+                case 'V':
+                    precioBase = 20;
+                    descuento = 0.05;
+                    break;
+                case 'E':
+                    precioBase = 30;
+                    descuento = 0;
+                    break;
+                default:
+                    alert("Tipo de producto no válido.");
+                    return;
+            }
+
+            var costoSinDescuento = precioBase * cantidad;
+            var costoTotal = costoSinDescuento - (costoSinDescuento * descuento);
+
+            alert("Costo sin descuento: $" + costoSinDescuento.toFixed(2) + "\nCosto total con descuento: $" + costoTotal.toFixed(2));
+        }
+
+        calcularCompra();
+    </script>
+</body>
+</html>
