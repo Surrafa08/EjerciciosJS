@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gogogo</title>
+</head>
+<body>
+    <script>
+        var suma = 0;
+        var continuar = true;
+
+        while (continuar) {
+            var entrada = prompt("Ingrese un número (o escriba 'salir' para terminar):");
+
+            if (entrada.toLowerCase() === 'salir') {
+                continuar = false;
+            } else {
+                var numero = parseFloat(entrada);
+
+                if (!isNaN(numero)) {
+                    suma += numero;
+                } else {
+                    console.log("Entrada no válida. Por favor, ingrese un número.");
+                }
+            }
+        }
+
+        console.log("La suma total de los números ingresados es: " + suma);
+    </script>
+</body>
+</html>
